@@ -1,0 +1,72 @@
+START
+
+# Given a collection of integers called "numbers"
+# Given a collection of strings called "strings"
+
+# Write a function that returns the sum of two numbers
+START
+    GET number1, number2
+    SET output = number1 + number2
+    PRINT output
+END
+
+# Write a function that takes an array of strings 
+START
+    SET iterator = 0
+    SET output
+
+    WHILE iterator <= length of strings
+        output = item at strings[iterator] + output
+    
+    PRINT output
+END
+
+# Write a function that returns every other entry
+START
+    SET iterator = 0
+    SET output
+
+    WHILE iterator <= length of numbers
+        SET output[item] (using push) = item at numbers[iterator]
+        iterator = iterator + 2
+    
+    PRINT output
+END
+    
+# Write a function that determines the index of the 3rd occurrence of a given character in
+# a string. For instance, if the given character is 'x' and the string is 'axbxcdxex', the
+# function should return 6 (the index of the 3rd 'x'). If the given character does not occur
+# at least 3 times, return null. 
+START (ARGS: number to find)
+
+    FOREACH number in numbers
+        SET count of finds
+
+        SET count of finds = 0
+        IF number === number to find
+            IF count of finds === 3
+                return number
+            ELSE count of finds = count of finds + 1
+        ELSE next number
+
+# a function that takes two arrays of numbers and returns the result of merging the arrays. 
+# The elements of the first array should become the elements at the even indexes of the 
+# returned array, while the elements of the second array should become the elements at the
+# odd indexes.
+
+START (ARGS: array1, array2)
+    
+    SET newArray
+
+    SET iterator = 0
+    FOREACH item in array1
+        PUSH item -> newArray[iterator]
+        iterator + 2
+    
+    SET iterator = 1
+    FOREACH item in array2
+        PUSH item -> newArray[iterator]
+        iterator + 2
+
+    PRINT newArray
+END
