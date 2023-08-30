@@ -3,12 +3,16 @@ START
 # Given a collection of integers called "numbers"
 # Given a collection of strings called "strings"
 
+
+
 # Write a function that returns the sum of two numbers
 START
     GET number1, number2
     SET output = number1 + number2
     PRINT output
 END
+
+
 
 # Write a function that takes an array of strings 
 START
@@ -21,6 +25,8 @@ START
     PRINT output
 END
 
+
+
 # Write a function that returns every other entry
 START
     SET iterator = 0
@@ -32,7 +38,9 @@ START
     
     PRINT output
 END
-    
+
+
+
 # Write a function that determines the index of the 3rd occurrence of a given character in
 # a string. For instance, if the given character is 'x' and the string is 'axbxcdxex', the
 # function should return 6 (the index of the 3rd 'x'). If the given character does not occur
@@ -48,6 +56,8 @@ START (ARGS: number to find)
                 return number
             ELSE count of finds = count of finds + 1
         ELSE next number
+
+
 
 # a function that takes two arrays of numbers and returns the result of merging the arrays. 
 # The elements of the first array should become the elements at the even indexes of the 
